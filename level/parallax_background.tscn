@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://v2vmbrrjvt6i"]
+
+[ext_resource type="Texture2D" uid="uid://b8424btp75onu" path="res://assets/background/sky.png" id="1_r313g"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2(0.1, 0)
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Sprite2" type="Sprite2D" parent="Sky"]
+position = Vector2(-755, -1.19209e-07)
+scale = Vector2(1.05762, 1.25391)
+texture = ExtResource("1_r313g")
+centered = false
