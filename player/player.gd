@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	velocity.y = minf(TERMINAL_VELOCITY, velocity.y + gravity * delta)
 	
 	if Input.is_action_just_pressed("down") and is_on_floor():
+		# The player drops down from the platform
 		position.y += 1
 
 	# Move player left or right
