@@ -5,7 +5,7 @@ signal coin_collected()
 
 const WALK_SPEED = 200.0
 const ACCELERATION_SPEED = WALK_SPEED * 6.0
-const JUMP_VELOCITY = -800.0
+const JUMP_VELOCITY = -700.0
 ## Maximum speed at which the player can fall.
 const TERMINAL_VELOCITY = 700
 
@@ -29,6 +29,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y *= 0.6
 	# Fall.
 	velocity.y = minf(TERMINAL_VELOCITY, velocity.y + gravity * delta)
+	
+	if Input.is_action_just_pressed("down") and is_on_floor():
+		position.y += 1
 
 	# Move player left or right
 	var direction := Input.get_axis("move_left" + action_suffix, "move_right" + action_suffix) * WALK_SPEED

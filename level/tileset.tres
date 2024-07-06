@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://08mkofgbxx70"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://08mkofgbxx70"]
 
 [ext_resource type="Texture2D" uid="uid://s0e7pb4qdtjq" path="res://assets/tiles/tiles.png" id="1_fsywm"]
 
@@ -26,9 +26,19 @@ texture_region_size = Vector2i(64, 64)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 9.5, -32, 9)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_howke"]
+texture = ExtResource("1_fsywm")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -10.5, 32, -11, 32, 12, -32, 11.5)
+4:0/0/physics_layer_0/polygon_0/one_way = true
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 16
 sources/0 = SubResource("TileSetAtlasSource_v3427")
 sources/1 = SubResource("TileSetAtlasSource_c6mot")
 sources/2 = SubResource("TileSetAtlasSource_1aoyv")
+sources/3 = SubResource("TileSetAtlasSource_howke")
