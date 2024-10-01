@@ -1,6 +1,6 @@
-# 2D Platformer
+# 2d-platformer-godot
 
-Demo of a 2D platformer with graphics and sound.
+Demo of a 2D platformer with graphics and sound using Godot.
 
 ## Screenshots
 
